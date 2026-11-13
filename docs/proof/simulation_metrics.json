@@ -1,0 +1,139 @@
+{
+  "episode_1_full_autonomy": {
+    "steps": 640,
+    "duration_s": 63.9,
+    "final_battery_pct": 83.79,
+    "slam_metrics": {
+      "coverage_pct": 91.87,
+      "occupied_precision": 0.8993,
+      "occupied_recall_observed": 0.8283,
+      "occupied_iou_observed": 0.758,
+      "true_positive_cells": 661.0,
+      "false_positive_cells": 74.0
+    },
+    "mean_odom_pos_error_cm": 165.833,
+    "mean_slam_pos_error_cm": 0.705,
+    "branch_tick_counts": {
+      "PATROL": 290,
+      "FACE_GREET": 12,
+      "VOICE_GOTO": 33,
+      "DOCK_CHARGE": 303,
+      "OBSTACLE_AVOID": 2
+    },
+    "events": [
+      [
+        4.8,
+        "PATROL:Reached waypoint 0 (0.42, 1.05)"
+      ],
+      [
+        5.8,
+        "SOCIAL:Greeted human 'Anwar' at 0.84m"
+      ],
+      [
+        8.0,
+        "INTENT:GOTO_POSE (Navigate to x=1.14, y=1.34)"
+      ],
+      [
+        11.2,
+        "INTENT_EXEC:Arrived at (1.14, 1.34)"
+      ],
+      [
+        13.2,
+        "PATROL:Reached waypoint 1 (1.12, 1.02)"
+      ],
+      [
+        17.2,
+        "PATROL:Reached waypoint 2 (1.18, 0.42)"
+      ],
+      [
+        20.3,
+        "SOCIAL:Greeted human 'Anwar' at 0.76m"
+      ],
+      [
+        25.2,
+        "PATROL:Reached waypoint 3 (1.98, 0.85)"
+      ],
+      [
+        29.3,
+        "PATROL:Reached waypoint 4 (2.05, 1.48)"
+      ],
+      [
+        44.0,
+        "INTENT:STATUS_REPORT (Give me a battery status report)"
+      ],
+      [
+        50.0,
+        "ENERGY:Charging on dock (21.2%)"
+      ],
+      [
+        52.5,
+        "ENERGY:Charging on dock (32.5%)"
+      ],
+      [
+        55.0,
+        "ENERGY:Charging on dock (43.7%)"
+      ],
+      [
+        57.5,
+        "ENERGY:Charging on dock (55.0%)"
+      ],
+      [
+        60.0,
+        "ENERGY:Charging on dock (66.2%)"
+      ],
+      [
+        62.5,
+        "ENERGY:Charging on dock (77.5%)"
+      ]
+    ]
+  },
+  "episode_2_cliff_recovery": {
+    "steps": 260,
+    "cliff_ticks": 12,
+    "events": [
+      [
+        0.8,
+        "SAFETY:Cliff detected \u2014 executing reverse recovery"
+      ],
+      [
+        1.3,
+        "SAFETY:Skipped hazardous patrol waypoint after cliff recovery"
+      ],
+      [
+        4.7,
+        "PATROL:Reached waypoint 1 (1.94, 0.88)"
+      ],
+      [
+        8.7,
+        "PATROL:Reached waypoint 2 (2.05, 1.48)"
+      ],
+      [
+        16.3,
+        "SAFETY:Cliff detected \u2014 executing reverse recovery"
+      ],
+      [
+        16.8,
+        "SAFETY:Skipped hazardous patrol waypoint after cliff recovery"
+      ],
+      [
+        20.8,
+        "PATROL:Reached waypoint 1 (1.94, 0.88)"
+      ],
+      [
+        24.8,
+        "PATROL:Reached waypoint 2 (2.05, 1.48)"
+      ]
+    ]
+  },
+  "ablation_odometry_vs_slam": {
+    "ideal_mean_err_cm": 0.0,
+    "nominal_raw_odom_mean_err_cm": 49.997,
+    "nominal_slam_mean_err_cm": 1.106,
+    "high_slip_raw_odom_mean_err_cm": 61.142,
+    "high_slip_slam_mean_err_cm": 1.209,
+    "nominal_max_odom_err_cm": 94.905,
+    "nominal_max_slam_err_cm": 1.607,
+    "high_slip_max_odom_err_cm": 98.944,
+    "high_slip_max_slam_err_cm": 3.561
+  }
+}
